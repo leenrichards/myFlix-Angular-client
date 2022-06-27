@@ -5,6 +5,7 @@ import { UserRegistrationService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 
+
 @Component({
   selector: 'app-user-login-form',
   templateUrl: './user-login-form.component.html',
@@ -29,6 +30,8 @@ export class UserLoginFormComponent implements OnInit {
     this.fetchApiData.userLogin(this.userCredentials).subscribe((response) => {
       localStorage.setItem('user', response.user.Username);
       localStorage.setItem('token', response.token);
+
+      this.router.navigate(['movies']);
       this.dialogRef.close();
       console.log(response);
       this.snackBar.open('You have logged in!', 'OK', {

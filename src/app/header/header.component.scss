@@ -1,0 +1,26 @@
+$backgroundColor: #f8f9fa;
+$headerColor: #000;
+$textColor: #fff;
+$hoverColor: lightgrey;
+$boxShadowColor: #e9ecef;
+
+.header {
+    border-bottom: $boxShadowColor;
+    background-color: $headerColor;
+    color: $textColor;
+
+}
+
+.logout-button {
+    float: right;
+    font-size: 16px !important;
+}
+
+.header-button {
+    font-size: 16px !important;
+
+}
+
+.mat-button:hover {
+    color: $hoverColor;
+}

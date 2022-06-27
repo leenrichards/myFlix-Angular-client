@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div class="movie-view" style="display: flex">
+    <mat-card *ngFor="let movie of movies; let i=index" style="flex: 1 1 auto;">
+
+        <mat-card-title>
+            <button mat-button (click)="openSynopsisDialog(movie.Title, movie.Description)" class="title-button">
+                {{movie.Title}}
+            </button>
+        </mat-card-title>
+        <mat-card-subtitle>Directed by:
+            <button mat-button
+                (click)="openDirectorDialog(movie.Director.Name, movie.Director.Bio, movie.Director.Birth)"
+                color="primary">
+                {{movie.Director.Name}}
+            </button>
+        </mat-card-subtitle>
+        <img src={{movie.ImagePath}} />
+
+    </mat-card>
+</div>
