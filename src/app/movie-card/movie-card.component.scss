@@ -11,9 +11,10 @@ $boxShadowColor: #e9ecef;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 50px 0;
+    padding: 50px 50px;
     background-color: $backgroundColor;
     justify-content: center;
+
 }
 
 .mat-card {
@@ -28,6 +29,11 @@ $boxShadowColor: #e9ecef;
     width: 280px;
     margin: 15px;
     padding: 20px 3px;
+}
+
+
+.mat-card-subtitle {
+    margin-bottom: 5px;
 }
 
 .mat-card-title {
@@ -69,6 +75,14 @@ img {
 }
 
 .title-button:hover {
-    background-color: transparent;
     font: #302b63;
+}
+
+.mat-button {
+    line-height: 27px;
+    padding-left: 0px;
+}
+
+img:hover {
+    cursor: pointer;
 }

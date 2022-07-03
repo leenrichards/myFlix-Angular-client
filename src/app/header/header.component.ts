@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
   }
 
   /**---- Go to movies page -----------*/
-
   goToMovies(): void {
     this.router.navigate(['movies']);
   }

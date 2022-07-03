@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { UserRegistrationService } from '../fetch-api-data.service'
+import { UserRegistrationService } from '../fetch-api-data.service';
+import { GenreComponent } from '../genre/genre.component';
 import { DirectorComponent } from '../director/director.component';
 import { MatDialog } from '@angular/material/dialog';
 import { SynopsisComponent } from '../synopsis/synopsis.component';
+import { DateAdapter } from '@angular/material/core';
 
 
 @Component({
@@ -43,7 +45,7 @@ export class MovieCardComponent {
       data: {
         Name: name,
         Bio: bio,
-        Birthday: birth,
+        Birthday: new Date(birth).toLocaleDateString(),
       },
       // Assign dialog width
       width: '500px'
@@ -66,4 +68,22 @@ export class MovieCardComponent {
     });
 
   }
+
+  /**
+   * opens the user genre dialog from GenreComponent to displaying details
+   * @param name
+   * @param description
+   */
+  openGenreDialog(name: string, description: string): void {
+    this.dialog.open(GenreComponent, {
+      data: {
+        Name: name,
+        Description: description,
+      },
+      // Assign dialog width
+      width: '500px'
+    });
+  }
+
 }
+

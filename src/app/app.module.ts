@@ -20,10 +20,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { DirectorComponent } from './director/director.component';
 import { HeaderComponent } from './header/header.component';
 import { SynopsisComponent } from './synopsis/synopsis.component';
+import { GenreComponent } from './genre/genre.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
@@ -37,10 +42,14 @@ const appRoutes: Routes = [
     WelcomePageComponent,
     DirectorComponent,
     HeaderComponent,
-    SynopsisComponent
+    SynopsisComponent,
+    GenreComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,

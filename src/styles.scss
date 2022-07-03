@@ -33,7 +33,8 @@ $myFlix-Angular-client-theme: mat.define-light-theme((color: (primary: $myFlix-A
 
 html,
 body {
-    height: 100%;
+    height: auto;
+    background: linear-gradient(180deg, #0f0c29, #302b63, #24243e);
 }
 
 body {

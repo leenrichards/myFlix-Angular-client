@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="user-profile-page">
+    <!-- User Profile -->
+    <mat-card class="user-profile-card">
+        <mat-card-header class="user-profile-card-header">
+            <mat-card-title>Profile Information</mat-card-title>
+        </mat-card-header>
+
+        <!-- View Profile Information -->
+
+
+        <mat-card-content class="edit-profile-dialog-content">
+            <form>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="user.Username" placeholder="Username" type="text" name="Username">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="user.Password" placeholder="Password" type="password" name="Password">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="user.Email" placeholder="Email" type="email" name="Email">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="user.Birthday" placeholder="Birthday" type="text" name="Birthday">
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="edit-profile-actions">
+            <button (click)="editUser()" mat-raised-button color="primary">
+                Update
+            </button>
+            <button mat-raised-button (click)="goToMovies()" aria-label="Close the edit profile button" mat-dialog-close
+                color="primary">
+                Back
+            </button>
+        </mat-card-actions>
+    </mat-card>
